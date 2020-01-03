@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Registration form</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form class="form-group registration-form">
+            <h3 class="form-heading">Registration form</h3>
+            <p>*All fields are required</p>
+            <div class="form-control">
+                <input type="text" class="user-name input-field" required>
+                <label for="userName">Name</label>
+            </div>
+            <div class="form-control">
+                <input type="text" class="user-number input-field" required>
+                <label for="phoneNumber">Phone Number</label>
+            </div>
+            <div class="form-control">
+                <input type="email" class="user-email input-field" required>
+                <label for="userName">Email Address</label>
+            </div>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+
+        <p class="info">Already a User? <a href="checkdetail.html"><strong>Log in</strong></a> now.</p>
+    </div>
+
+
+    <script src="./script/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+:root {
+  --primary-color: rgb(75, 75, 255);
+  --text-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  color: #141414;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.update {
+  margin: 1.4rem auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-heading {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  width: 100%;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-control {
+  position: relative;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 12px;
+  transition: top 400ms;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.4rem 0;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #141414;
+  transition: border-bottom 0.5s;
+}
+
+.input-field:focus + label,
+.input-field:valid + label {
+  top: -8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.input-field:focus,
+.input-field:valid {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.error {
+  color: red;
+}
+
+.btn {
+  padding: 0.5rem;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.toggle-wrapper {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-wrapper div {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-password {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+}
+
+.toggle-wrapper div div::after {
+  position: absolute;
+  content: '';
+  background-color: var(--primary-color);
+  width: 20px;
+  height: 14px;
+  border-radius: 100%;
+}
+
+.toggle-wrapper div div::before {
+  z-index: 2;
+  position: absolute;
+  content: '';
+  background-color: var(--primary-color);
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  border: 1.5px solid white;
+}
+
+.toggle-password:checked + div::before {
+  opacity: 0.7;
+}
+
+.user-detail > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  width: 100%;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
